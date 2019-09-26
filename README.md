@@ -7,6 +7,12 @@
 <div align="center"><strong>Vebug</strong></div>
 <div align="center">A visual component debugger packaged as a React Component.</div>
 
+<br />
+
+<p align="center">
+  <img src="src/images/vebug-demo.gif" alt="vebug demo" align="center" />
+</p>
+
 ## 🚀 Quick start
 
 1.  **Installation**
