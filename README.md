@@ -35,6 +35,8 @@
     </Vebug>
     ```
 
+<br/>
+
 **Shortcomings**
 
 Vebug works by overriding the CSS of its children, but will not override CSS styles defined directly on any component defined by ID.
