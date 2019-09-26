@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="" alt="vebug banner" align="center" />
+  <img src="src/images/vebug-logo.png" alt="vebug banner" align="center" />
 </p>
 
 <br />
