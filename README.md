@@ -8,7 +8,9 @@
 <div align="center">A visual component debugger packaged as a React Component.</div>
 
 <br />
+<br />
 
+<div align="center"><strong>Easily visualize the total space of your components</strong></div>
 <p align="center">
   <img src="src/images/vebug-demo.gif" alt="vebug demo" align="center" />
 </p>
