@@ -1,6 +1,6 @@
 {
   "name": "vebug",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A visual debugger for React development",
   "main": "build/index.js",
   "module": "build/index.es.js",
@@ -8,6 +8,7 @@
   "scripts": {
     "prebuild": "rimraf ./build",
     "build": "rollup -c",
+    "prepublish": "npm run build",
     "test": "jest"
   },
   "repository": {
