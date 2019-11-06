@@ -38,6 +38,7 @@
 <br/>
 
 **Features**
+
 Vebug will automatically calculate the DOM depth of your component and colorize every child element. Don't like the colors? Refresh and new colors will be generated.
 
 **Shortcomings**
