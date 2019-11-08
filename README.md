@@ -5,7 +5,7 @@
 <br />
 
 <div align="center"><strong>Vebug</strong></div>
-<div align="center">A visual component debugger packaged as a React Component.</div>
+<div align="center">🐞 A visual component debugger packaged as a React Component 🐞</div>
 
 <br />
 <br />
