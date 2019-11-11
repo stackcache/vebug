@@ -51,11 +51,11 @@
 
 <br/>
 
-**Features**
+## Features
 
 Vebug will automatically calculate the DOM depth of your component and colorize every child element. Don't like the colors? Refresh and new colors will be generated.
 
-**Shortcomings**
+## Shortcomings
 
 Vebug works by overriding the CSS of its children, but will not override CSS styles defined directly on any component defined by ID.
 
