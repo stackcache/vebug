@@ -4,7 +4,8 @@ Thanks for contributing to Vebug! Feel free to file issue reports, submit PRs an
 
 Before you open a PR:
 
-- In development, run `yarn start:dev` to build (and watch) the example project source, and run
+- Create a branch off of the `master` branch
+- Locally, run `yarn start:dev` to build (and watch) the example project source, and run
   the [development server](http://localhost:8000).
 - Please ensure all the tool works correctly after your change.
 - Ensure that your effort is aligned with the project's roadmap by talking to
@@ -21,3 +22,4 @@ Before you open a PR:
 - Please [follow our established coding conventions](https://github.com/keystonejs/keystone/wiki/Coding-Standards)
   (with regards to formatting, etc)
 - All new features and changes need documentation.
+- Create a PR into the `master` branch
