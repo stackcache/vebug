@@ -6,7 +6,7 @@ Before you open a PR:
 
 - Create a branch off of the `master` branch
 - Locally, run `yarn start:dev` to build (and watch) the example project source, and run
-  the [development server](http://localhost:8000).
+  the [development server](http://localhost:1234).
 - Please ensure all the tool works correctly after your change.
 - Ensure that your effort is aligned with the project's roadmap by talking to
   the maintainers, especially if you are going to spend a lot of time on it.
