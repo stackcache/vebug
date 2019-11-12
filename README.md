@@ -19,6 +19,7 @@
   <a href="https://opensource.org/licenses/">
     <img src="https://img.shields.io/npm/l/vebug"/>
   </a>
+  <img src="https://img.shields.io/npm/v/vebug"/>
 </div>
 
 <br />
