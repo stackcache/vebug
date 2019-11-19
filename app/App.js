@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App" ref={parentEl}>
-      <h1>CSS Image Hover Effects</h1>
+      <h1 style={{ marginTop: 0 }}>CSS Image Hover Effects</h1>
       <p>
         ←{' '}
         <a

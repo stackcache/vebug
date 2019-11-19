@@ -3,6 +3,7 @@
  */
 
 import React, { useState, useRef, useEffect } from 'react';
+import Switch from 'react-switch';
 import * as S from './styles';
 
 type VebugProps = {
@@ -17,7 +18,7 @@ const getDomDepthLevel = (root: Element | null) => {
 
   if (root) {
     for (let i = 0, j = root.children.length; i < j; i++) {
-      const childNode = root.children[i];
+      const childNode = root.children[i] as HTMLElement;
       const curNodePathInfo = getDomDepthLevel(childNode);
       if (curNodePathInfo.level > pathInfo.level) {
         pathInfo = curNodePathInfo;
@@ -51,6 +52,7 @@ const Vebug = (props: VebugProps) => {
   const { children } = props;
   const wrapperRef = useRef(null);
   const [colors, setColors] = useState('');
+  const [showZIndicator, setShowZIndicator] = useState(false);
 
   useEffect(() => {
     if (wrapperRef && wrapperRef.current) {
@@ -67,9 +69,25 @@ const Vebug = (props: VebugProps) => {
   }, [wrapperRef]);
 
   return (
-    <S.VebugWrapper colors={colors} ref={wrapperRef}>
-      {children}
-    </S.VebugWrapper>
+    <>
+      <S.ZSwitchWrapper>
+        <label>{showZIndicator ? 'Hide' : 'Show'} Z-Index</label>
+        <Switch
+          className="z-indicator-switch"
+          onChange={() => setShowZIndicator(!showZIndicator)}
+          checked={showZIndicator}
+          boxShadow="0 0.25em 0.25em -0.125em rgba(0, 0, 0, 0.25),
+          0 0.5em 1.25em rgba(0, 0, 0, 0.5)"
+        />
+      </S.ZSwitchWrapper>
+      <S.VebugWrapper
+        colors={colors}
+        ref={wrapperRef}
+        showZIndicator={showZIndicator}
+      >
+        {children}
+      </S.VebugWrapper>
+    </>
   );
 };
 
