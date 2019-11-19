@@ -11,14 +11,24 @@ type VebugProps = {
 
 const getDomDepthLevel = (root: Element | null) => {
   let pathInfo = {
-    level: 0
+    level: 0,
+    zIndex: '0',
   };
 
   if (root) {
     for (let i = 0, j = root.children.length; i < j; i++) {
-      const curNodePathInfo = getDomDepthLevel(root.children[i]);
+      const childNode = root.children[i];
+      const curNodePathInfo = getDomDepthLevel(childNode);
       if (curNodePathInfo.level > pathInfo.level) {
         pathInfo = curNodePathInfo;
+      }
+      const childZIndex = childNode.style.zIndex || '0';
+      curNodePathInfo.zIndex = childZIndex;
+      if (parseInt(childZIndex) > 0) {
+        const zIndicator = document.createElement('div');
+        zIndicator.innerText = curNodePathInfo.zIndex;
+        zIndicator.className += 'z-indicator';
+        childNode.appendChild(zIndicator);
       }
     }
 
@@ -33,15 +43,7 @@ const generateRGBAColor = (): string => {
     r = Math.random,
     s = 255;
   return (
-    'rgba(' +
-    o(r() * s) +
-    ',' +
-    o(r() * s) +
-    ',' +
-    o(r() * s) +
-    ',' +
-    r().toFixed(1) +
-    ')'
+    'rgba(' + o(r() * s) + ',' + o(r() * s) + ',' + o(r() * s) + ',' + '0.3)'
   );
 };
 

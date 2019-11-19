@@ -36,19 +36,19 @@ function App() {
 
       <h2>No Effect</h2>
       <div className="column">
-        <div>
+        <div style={{ zIndex: 1 }}>
           <figure>
             <img src="https://picsum.photos/300/200?image=244" />
           </figure>
           <span>Hover</span>
         </div>
-        <div>
+        <div style={{ zIndex: 1 }}>
           <figure>
             <img src="https://picsum.photos/300/200?image=1024" />
           </figure>
           <span>Hover</span>
         </div>
-        <div>
+        <div style={{ zIndex: 1 }}>
           <figure>
             <img src="https://picsum.photos/300/200?image=611" />
           </figure>
