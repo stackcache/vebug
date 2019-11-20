@@ -53,6 +53,7 @@ const Vebug = (props: VebugProps) => {
   const wrapperRef = useRef(null);
   const [colors, setColors] = useState('');
   const [showZIndicator, setShowZIndicator] = useState(false);
+  const [showVebug, setShowVebug] = useState(true);
 
   useEffect(() => {
     if (wrapperRef && wrapperRef.current) {
@@ -71,19 +72,32 @@ const Vebug = (props: VebugProps) => {
   return (
     <>
       <S.ZSwitchWrapper>
-        <label>{showZIndicator ? 'Hide' : 'Show'} Z-Index</label>
-        <Switch
-          className="z-indicator-switch"
-          onChange={() => setShowZIndicator(!showZIndicator)}
-          checked={showZIndicator}
-          boxShadow="0 0.25em 0.25em -0.125em rgba(0, 0, 0, 0.25),
-          0 0.5em 1.25em rgba(0, 0, 0, 0.5)"
-        />
+        <S.Row>
+          <label>{showVebug ? 'Hide' : 'Show'} Vebug</label>
+          <Switch
+            className="z-indicator-switch"
+            onChange={() => setShowVebug(!showVebug)}
+            checked={showVebug}
+            boxShadow="0 0.25em 0.25em -0.125em rgba(0, 0, 0, 0.25),
+            0 0.5em 1.25em rgba(0, 0, 0, 0.5)"
+          />
+        </S.Row>
+        <S.Row>
+          <label>{showZIndicator ? 'Hide' : 'Show'} Z-Index</label>
+          <Switch
+            className="z-indicator-switch"
+            onChange={() => setShowZIndicator(!showZIndicator)}
+            checked={showZIndicator}
+            boxShadow="0 0.25em 0.25em -0.125em rgba(0, 0, 0, 0.25),
+            0 0.5em 1.25em rgba(0, 0, 0, 0.5)"
+          />
+        </S.Row>
       </S.ZSwitchWrapper>
       <S.VebugWrapper
         colors={colors}
         ref={wrapperRef}
         showZIndicator={showZIndicator}
+        showVebug={showVebug}
       >
         {children}
       </S.VebugWrapper>

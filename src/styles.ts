@@ -3,6 +3,7 @@ import styled from 'styled-components';
 type Props = {
   colors: string;
   showZIndicator: boolean;
+  showVebug: boolean;
 };
 
 const ZSwitchWrapper = styled.div`
@@ -10,7 +11,8 @@ const ZSwitchWrapper = styled.div`
   top: 8px;
   right: 8px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   font-size: 20px;
   padding: 8px 16px;
@@ -24,8 +26,15 @@ const ZSwitchWrapper = styled.div`
   }
 `;
 
+const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  width: 100%;
+`;
+
 const VebugWrapper = styled.div`
-  ${(props: Props) => props.colors}
+  ${(props: Props) => props.showVebug && props.colors}
 
   .z-indicator {
     display: ${(props: Props) => (props.showZIndicator ? 'flex' : 'none')};
@@ -45,4 +54,4 @@ const VebugWrapper = styled.div`
   }
 `;
 
-export { ZSwitchWrapper, VebugWrapper };
+export { ZSwitchWrapper, Row, VebugWrapper };
