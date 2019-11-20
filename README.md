@@ -26,6 +26,7 @@
 
 <div align="center"><strong>Easily visualize the total space of your components (including margin and padding)</strong></div>
 <br />
+
 <p align="center">
   <img src="src/images/vebug-demo.gif" alt="vebug demo" align="center" />
 </p>
@@ -55,6 +56,12 @@
 ## Features
 
 Vebug will automatically calculate the DOM depth of your component and colorize every child element. Don't like the colors? Refresh and new colors will be generated.
+
+### Toggle z-index indicator
+
+<p align="center">
+  <img src="src/images/vebug-z-index-demo.gif" alt="vebug demo" align="center" />
+</p>
 
 ## Shortcomings
 
