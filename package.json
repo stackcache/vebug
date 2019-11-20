@@ -1,6 +1,6 @@
 {
   "name": "vebug",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A visual debugger for React development",
   "main": "build/index.js",
   "module": "build/index.es.js",
@@ -50,6 +50,14 @@
     "build"
   ],
   "homepage": "https://github.com/stackcache/vebug#readme",
+  "keywords": [
+    "react",
+    "debug",
+    "css",
+    "visual",
+    "typescript",
+    "component"
+  ],
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
