@@ -1,6 +1,6 @@
 {
   "name": "vebug",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A visual debugger for React development",
   "main": "build/index.js",
   "module": "build/index.es.js",
@@ -13,6 +13,12 @@
     "prestart:dev": "rimraf ./dist && yarn",
     "start:dev": "parcel public/index.html"
   },
+  "bundlesize": [
+    {
+      "path": "./build",
+      "maxSize": "2 kB"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stackcache/vebug.git"
@@ -37,6 +43,7 @@
     "react-scripts-ts": "^3.1.0",
     "react-test-renderer": "^16.9.0",
     "rollup": "^1.21.4",
+    "rollup-plugin-babel": "3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
