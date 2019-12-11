@@ -57,7 +57,7 @@
 
 Vebug will automatically calculate the DOM depth of your component and colorize every child element. Don't like the colors? Refresh and new colors will be generated.
 
-### Toggle z-index indicator
+### Toggle z-index indicator (v1.0.4+)
 
 <p align="center">
   <img src="src/images/vebug-z-index-demo.gif" alt="vebug demo" align="center" />
@@ -66,6 +66,32 @@ Vebug will automatically calculate the DOM depth of your component and colorize 
 ## Shortcomings
 
 Vebug works by overriding the CSS of its children, but will not override CSS styles defined directly on any component defined by ID.
+
+## Release Notes
+
+#### v1.0.5
+
+- Reduced package size by 91%
+
+#### v1.0.4
+
+- Added z-index indicator toggle
+
+#### v1.0.3
+
+- Bug fixes
+
+#### v1.0.2
+
+- Bug fixes
+
+#### v1.0.1
+
+- Bug fixes
+
+#### v1.0.0
+
+- First production release
 
 ## License
 
