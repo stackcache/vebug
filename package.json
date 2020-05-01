@@ -8,10 +8,11 @@
   "scripts": {
     "prebuild": "rimraf ./build",
     "build": "rollup -c",
-    "prepublish": "npm run build",
+    "prepublish": "npm run snyk-protect && npm run build",
     "test": "jest",
     "prestart:dev": "rimraf ./dist && yarn",
-    "start:dev": "parcel public/index.html"
+    "start:dev": "parcel public/index.html",
+    "snyk-protect": "snyk protect"
   },
   "bundlesize": [
     {
@@ -77,6 +78,8 @@
     "@types/styled-components": "^4.1.19",
     "react-switch": "^5.0.1",
     "rimraf": "^3.0.0",
-    "styled-components": "^4.4.0"
-  }
+    "styled-components": "^4.4.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
