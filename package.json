@@ -74,7 +74,7 @@
     "react-dom": "^16.0.0"
   },
   "dependencies": {
-    "@types/styled-components": "^4.1.19",
+    "@types/styled-components": "^5.1.7",
     "react-switch": "^5.0.1",
     "rimraf": "^3.0.0",
     "styled-components": "^4.4.0"
